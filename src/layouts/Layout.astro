@@ -1,12 +1,19 @@
 ---
 import Head from "./Head.astro";
 
-const title = "Blog de Ignacio Garcia Pizales";
-const description = "Blog sobre IA, software";
+interface Props {
+	title?: string;
+	description?: string;
+}
+
+const defaultTitle = "Blog de Ignacio Garcia Pizales";
+const defaultDescription = "Blog sobre IA, software";
+
+const { title = defaultTitle, description = defaultDescription } = Astro.props;
 ---
 
 <!doctype html>
-<html lang="en">
+<html lang="es">
 	<Head {title} {description} />
 	<body>
 		<slot />
