@@ -4,8 +4,12 @@ import Social from "./Social.astro";
 ---
 
 <header>
+    <h2>
+        <a href="/">Blog de Ignacio Garcia Pizales</a>
+    </h2>
+
     <nav>
-        <HeaderLink href="/">Blog de Ignacio Garcia Pizales</HeaderLink>
+        <HeaderLink href="/">Home</HeaderLink>
         <HeaderLink href="/blog">Blog</HeaderLink>
         <HeaderLink href="/about">Acerca de</HeaderLink>
     </nav>
@@ -18,9 +22,13 @@ import Social from "./Social.astro";
 
 <style>
     header {
-        padding: 1rem;
+        padding: 1rem 2rem;
         background-color: cadetblue;
         display: flex;
         justify-content: space-between;
+    }
+
+    nav a {
+        padding-left: 1rem;
     }
 </style>
