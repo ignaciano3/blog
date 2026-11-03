@@ -1,7 +1,15 @@
 ---
+import { getCollection } from "astro:content";
 import MainLayout from "../layouts/MainLayout.astro";
+import PostItem from "../components/PostItem.astro";
+
+const postsCollection = await getCollection("blog");
+const posts = postsCollection.sort(
+    (a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf(),
+);
 ---
 
 <MainLayout>
     <h1>Blog</h1>
+    {posts.map((post) => <PostItem {...post} />)}
 </MainLayout>
