@@ -1,15 +1,13 @@
 ---
 import Head from "./Head.astro";
+import { SITE_DESCRIPTION, SITE_TITLE } from "../consts.ts";
 
 interface Props {
 	title?: string;
 	description?: string;
 }
 
-const defaultTitle = "Blog de Ignacio Garcia Pizales";
-const defaultDescription = "Blog sobre IA, software";
-
-const { title = defaultTitle, description = defaultDescription } = Astro.props;
+const { title = SITE_TITLE, description = SITE_DESCRIPTION } = Astro.props;
 ---
 
 <!doctype html>
