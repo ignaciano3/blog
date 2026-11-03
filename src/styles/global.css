@@ -2,3 +2,7 @@ body {
     font-family: var(--font-exo);
 	margin: 0;
 }
+
+a {
+    text-decoration: none;
+}
