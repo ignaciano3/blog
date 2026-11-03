@@ -1,13 +1,25 @@
+---
+import Social from "./Social.astro";
+---
+
 <header>
     <nav>
         <a href="/">Blog de Ignacio Garcia Pizales</a>
+        <a href="/blog">Blog</a>
         <a href="/about">Acerca de</a>
     </nav>
+
+    <div>
+        <Social platform="instagram" username="ignaciogp08" />
+        <Social platform="github" username="ignaciano3" />
+    </div>
 </header>
 
 <style>
     header {
         padding: 1rem;
         background-color: cadetblue;
+        display: flex;
+        justify-content: space-between;
     }
 </style>
