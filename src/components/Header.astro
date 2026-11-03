@@ -1,17 +1,18 @@
 ---
+import HeaderLink from "./HeaderLink.astro";
 import Social from "./Social.astro";
 ---
 
 <header>
     <nav>
-        <a href="/">Blog de Ignacio Garcia Pizales</a>
-        <a href="/blog">Blog</a>
-        <a href="/about">Acerca de</a>
+        <HeaderLink href="/">Blog de Ignacio Garcia Pizales</HeaderLink>
+        <HeaderLink href="/blog">Blog</HeaderLink>
+        <HeaderLink href="/about">Acerca de</HeaderLink>
     </nav>
 
     <div>
-        <Social platform="instagram" username="ignaciogp08" />
-        <Social platform="github" username="ignaciano3" />
+        <Social platform="instagram" />
+        <Social platform="github" />
     </div>
 </header>
 

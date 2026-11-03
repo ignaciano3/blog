@@ -1,16 +1,44 @@
 ---
-interface Props {
+import { Image } from "astro:assets";
+import { capitalize } from "../lib/string";
+
+interface SocialNetwork {
     platform: string;
     username: string;
 }
 
-const { platform, username } = Astro.props;
+const socialNetworks = [
+    { platform: "github", username: "ignaciano3" },
+    { platform: "instagram", username: "ignaciogp08" },
+] as const satisfies SocialNetwork[];
+
+type Platform = (typeof socialNetworks)[number]["platform"];
+
+function getSocialNetworkHref(platform: Platform) {
+    const socialNetwork = socialNetworks.find(
+        (network) => network.platform === platform,
+    )!;
+
+    const href = `https://www.${socialNetwork.platform}.com/${socialNetwork.username}`;
+    return href;
+}
+
+interface Props {
+    platform: Platform;
+}
+
+const { platform } = Astro.props;
 ---
 
 <a
-    href={`https://www.${platform}.com/${username}`}
+    href={getSocialNetworkHref(platform)}
     target="_blank"
     rel="noopener noreferrer"
 >
-    {platform}
+    <Image
+        src={`/icons/${platform}.svg`}
+        alt={capitalize(platform)}
+        width={30}
+        height={30}
+    />
 </a>
