@@ -10,6 +10,7 @@ interface SocialNetwork {
 const socialNetworks = [
     { platform: "github", username: "ignaciano3" },
     { platform: "instagram", username: "ignaciogp08" },
+    { platform: "linkedin", username: "in/ignacio-garcia-pizales" },
 ] as const satisfies SocialNetwork[];
 
 type Platform = (typeof socialNetworks)[number]["platform"];
