@@ -4,7 +4,7 @@ description: "Dificultades encontradas, ventajas inesperadas y goze de poder pro
 pubDate: "Nov 3 2026"
 ---
 
-Estoy diseñando este blog como prueba de ver como es volver a codear un pequeño proyecto sin intervención de un LLM.
+Estoy diseñando este blog como prueba de ver como es volver a codear un pequeño proyecto sin la intervención de un LLM.
 
 Cuando empece a programar en el colegio lo que mas me gustaba era ir mejorando de a poco lo que iba haciendo. 
 Por ejemplo, mejorar la interfaz de alguna aplicación que estaba haciendo con Visual Basic, una página hecha enteramente
