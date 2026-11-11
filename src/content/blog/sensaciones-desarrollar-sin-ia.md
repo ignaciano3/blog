@@ -41,7 +41,7 @@ humana. Prefiero usar la IA para cambios / features pequeños no para vibe codea
 
 ## Actividad para hacer
 
-Te dejo como actividad interesante para hacer, un pequeño proyecto en el que solo utilizes tus conocimientos, la documentación del framework
+Te dejo como actividad interesante para hacer, un pequeño proyecto en el que solo utilices tus conocimientos, la documentación del framework
 y del lenguaje para ver qué tan dependiente de la IA sos. En mi caso, sin tener la documentación al lado se me complica bastante (siempre fue
 así) pero si la IA desapareciera no tendría ninguna complicación más que para resolver bugs complejos.
 
