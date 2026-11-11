@@ -1,5 +1,5 @@
 ---
-title: "Como se siente desarrollar una web sin usar IA"
+title: "Cómo se siente desarrollar una web sin usar IA"
 description: "Dificultades encontradas, ventajas inesperadas y goce de poder programar sin prisa o apuro"
 pubDate: "Nov 3 2026"
 ---
