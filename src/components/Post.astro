@@ -1,0 +1,27 @@
+---
+import { type CollectionEntry, getCollection, render } from "astro:content";
+import FormattedDate from "./FormattedDate.astro";
+
+export async function getStaticPaths() {
+  const posts = await getCollection("blog");
+  return posts.map((post) => ({
+    params: { slug: post.id },
+    props: post,
+  }));
+}
+
+type Props = CollectionEntry<"blog">;
+
+const post = Astro.props;
+const { Content } = await render(post);
+---
+
+<h1>{post.data.title}</h1>
+<FormattedDate date={post.data.pubDate} />
+{post.data.updatedDate && (
+  <>
+    Actualizado: <FormattedDate date={post.data.updatedDate} />
+  </>
+)}
+<p>Autor: {post.data.author}</p>
+<Content />

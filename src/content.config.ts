@@ -9,6 +9,7 @@ const blog = defineCollection({
         description: z.string(),
         pubDate: z.coerce.date(),
         updatedDate: z.coerce.date().optional(),
+        author: z.string().optional().default("Ignacio Garcia Pizales")
     }),
 })
 
