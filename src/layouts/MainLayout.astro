@@ -1,28 +1,38 @@
 ---
-import Header from "../components/Header.astro";
 import Footer from "../components/Footer.astro";
+import Header from "../components/Header.astro";
 import Layout from "./Layout.astro";
 ---
 
 <Layout>
-    <div class="container">
-        <Header />
-        <main>
-            <slot />
-        </main>
-        <Footer />
-    </div>
+  <div class="container">
+    <Header />
+    <main>
+      <slot />
+    </main>
+    <Footer />
+  </div>
 </Layout>
 
 <style>
-    .container {
-        display: grid;
-        min-height: 100vh;
-        grid-template-rows: auto 1fr auto;
+  .container {
+    display: grid;
+    min-height: 100vh;
+    grid-template-rows: auto 1fr auto;
+    background-color: aliceblue;
+  }
+
+  main {
+    max-width: 80rem;
+    margin-inline: auto;
+    padding: 1rem;
+    
+    @media (width >= 30rem) {
+      padding-inline: 1.5rem;
     }
 
-    main {
-        padding: 2rem;
-        background-color: aliceblue;
+    @media (width >= 64rem) {
+      padding-inline: 2rem;
     }
+  }
 </style>
